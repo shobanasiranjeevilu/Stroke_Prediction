@@ -1,7 +1,7 @@
 # Stroke_Prediction
 
-<p style="padding:10px;background-color:#432C0A;margin:0;color:#c69c6c;font-family:Arial, sans-serif;font-size:1.5em;text-align:center;border-radius:10px;overflow:hidden;font-weight:500">Business Case</p>
 
+### Business Case
 
 <p style="text-align:justify;color:#2E4057;font-family:Arial, sans-serif;font-size:1.1em">
 <b>Introduction</b> An ACO - Accountable Care Organization has developed an outreach program where a team of health coaches will work with members to reduce their risk of stroke. However, they do not have enough resources to engage every member of their population. Therefore, they would like us to develop a model that can be used to match the health coaches with those individuals who have the highest risk of stroke.  <br>
@@ -16,7 +16,7 @@
 </p>
 
 
-<p style="padding:10px;background-color:#432C0A;margin:0;color:#c69c6c;;font-family:Arial, sans-serif;font-size:1.5em;text-align:center;border-radius:10px;overflow:hidden;font-weight:500">Dataset</p>
+### Dataset
 
 * **id:** Unique identifier
 * **gender:** Gender of the patient (Male, Female, Other)
@@ -35,7 +35,7 @@
 * **stroke:** **1** if the patient had a stroke or **0** if not
 
 
-<p style="padding:10px;background-color:#432C0A;margin:0;color:#c69c6c;font-family:Arial, sans-serif;font-size:1.5em;text-align:center;border-radius:10px;overflow:hidden;font-weight:500">Exploratory Data Analysis</p>
+### Exploratory Data Analysis
 
 <p style="font-weight:bold;font-size:1.1em ">Insights from Data Quality Assessment
 
@@ -56,5 +56,22 @@
 7. **Mixed data types**
 
 8. **Label encoding would be required for categorical column**
+
+
+
+### Resampling
+
+<b> Given dataset is highly imbalanced and skewed towards Negative stroke cases where the positive class (stroke in this case) is a small minority. </b> 
+
+In order to handling the imbalance in the data various techniques like oversampling, undersampling, Synthetic sampling can be used.
+
+- Undersampling: This involves removing some of the majority class (no stroke) samples to balance the class distribution. However, this can lead to loss of information and may not always be the best approach.
+
+- Oversampling: This involves replicating some of the minority class (stroke) samples to balance the class distribution. This can lead to overfitting, as the model may become too familiar with the minority class samples.
+
+- Synthetic Sampling: This involves generating new samples in the minority class (stroke) by using techniques like SMOTE (Synthetic Minority Over-sampling Technique), which generates synthetic samples by interpolating between existing samples.
+
+
+<b> Hence, I intend to use Synthetic Sampling using SMOTE </b>
 
 
