@@ -112,8 +112,7 @@ With scikitlearn's ColumnTransformer buildng a pipeline to scale numerical featu
 
 After scaling the data performed feature selection using RandomForest's feature_importances_ method.
     
-    'feature_importances_' is calculated based on the RandomForest model's prediction performance, which is trained on the input data. The importance of a feature is determined by measuring the reduction in the model's performance when that feature is removed from the data. This model-based approach is efficient because it can capture 
-    the nonlinear relationships between features and the target variable.
+'feature_importances_' is calculated based on the RandomForest model's prediction performance, which is trained on the input data. The importance of a feature is determined by measuring the reduction in the model's performance when that feature is removed from the data. This model-based approach is efficient because it can capture the nonlinear relationships between features and the target variable.
 
      
 
@@ -124,16 +123,16 @@ From the above process, it shows that <b> age, metric_1,metric_2,metric_4, occup
 
 __For this business problem, we are building a model to predict the highest risk for strokes.__
     
-    To start, we used a Generalized Linear Model (GLM) as a base model to model the risk of stroke. GLM is a flexible and powerful modeling technique that can handle a wide range of data distributions and can be used for both binary and continuous outcomes. Specifically, we use binomial, which is a type of GLM that is well-suited for binary outcomes.
+To start, we used a Generalized Linear Model (GLM) as a base model to model the risk of stroke. GLM is a flexible and powerful modeling technique that can handle a wide range of data distributions and can be used for both binary and continuous outcomes. Specifically, we use binomial, which is a type of GLM that is well-suited for binary outcomes.
     
-    GLM, to establish a baseline performance and gain insights into the relationships between the predictors and the outcome. This will help us identify the most important predictors and assess the overall predictive power of the model. To improve the performance of the GLM, we performed hyperparameter tuning on alpha and regularization parameters which did not result in any significant improvement (i.e) default hyperparameters of the model were well-suited for the data. 
+GLM, to establish a baseline performance and gain insights into the relationships between the predictors and the outcome. This will help us identify the most important predictors and assess the overall predictive power of the model. To improve the performance of the GLM, we performed hyperparameter tuning on alpha and regularization parameters which did not result in any significant improvement (i.e) default hyperparameters of the model were well-suited for the data. 
     
-    Once we have established the baseline performance, we explored more on advanced machine learning algorithms, such as XGBoost, to improve the performance set by base model and identify individuals with the highest risk of stroke.
+Once we have established the baseline performance, we explored more on advanced machine learning algorithms, such as XGBoost, to improve the performance set by base model and identify individuals with the highest risk of stroke.
     
-    To further improve the performance of the XGBoost model, we performed hyperparameter tuning using RandomizedSearchCV by tuning the 'learning rate', 'max_depth', and 'n_estimators' hyperparameters to find the optimal values that maximize the model's performance.
+To further improve the performance of the XGBoost model, we performed hyperparameter tuning using RandomizedSearchCV by tuning the 'learning rate', 'max_depth', and 'n_estimators' hyperparameters to find the optimal values that maximize the model's performance.
     
-    with optimal hyperparameters for the XGBoost model, we retrain the model and evaluate its performance on a holdout dataset to ensure its generalizability to new data. 
+with optimal hyperparameters for the XGBoost model, we retrain the model and evaluate its performance on a holdout dataset to ensure its generalizability to new data. 
     
-    By performing hyperparameter tuning on the XGBoost model, we achieved even better performance than the baseline GLM model.
+By performing hyperparameter tuning on the XGBoost model, we achieved even better performance than the baseline GLM model.
  
 
