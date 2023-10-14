@@ -136,3 +136,36 @@ with optimal hyperparameters for the XGBoost model, we retrain the model and eva
 By performing hyperparameter tuning on the XGBoost model, we achieved even better performance than the baseline GLM model.
  
 
+### Model Evaluation
+
+The GLM model has a higher number of Type 1 and Type 2 errors compared to XGBoost. This suggests that the GLM model may not be as accurate in its predictions as the XGBoost model.
+
+Both models have a high number of True Positives and True Negatives, indicating that they are effective in correctly classifying positive and negative cases.
+
+The XGBoost model has a higher overall accuracy, as it has a lower number of Type 1 and Type 2 errors compared to GLM.
+
+In the context of predicting the highest risk of strokes, it would be important to minimize False Negatives (Type 2 errors), as these represent cases where the model incorrectly predicts that a patient is not at high risk of strokes when in fact they are. This is because a False Negative could result in a patient not receiving appropriate medical attention or interventions that could prevent or reduce the risk of stroke.
+
+In ROC curves, a higher TPR (true positive rate) and a lower FPR (false positive rate) is considered better performance.
+
+While comparing XGBoost and GLM models, it appears that the XGBoost model achieves a higher TPR (0.98) at a lower FPR (0.0) compared to the GLM model, which reaches a TPR of 0.82 at a higher FPR of 0.25.
+
+
+### Results
+__Pros__ 
+    
+XGBoost performed incredibly well on the given dataset in identifying highest risk for stroke with a F1 score of 98%. This suggests that the XGBoost model is performing better than the GLM model in terms of its ability to correctly identify positive cases while minimizing false positives.
+    
+while comparing the results of confusion matrix, XGBoost has recorded minimum Type 2 error (Actual 1, Predicted 0)  than GLM which suggests that it is more efficient in identifying stroke risk.
+    
+__Cons__
+    
+Eventhough GLM model is easy to implement, It almost classified 8% of the actual stroke data as No Stroke which is 
+7.1% higher than XGBoost. 
+    
+GLM doesn't show any significant improvement even after performing hyperparamenter tuning. 
+
+
+Therefore, We select XGBoost to predict highest stroke risk for the members of ACO
+
+
